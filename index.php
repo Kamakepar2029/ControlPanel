@@ -2,6 +2,9 @@
       $num = file_get_contents('visitors/number.txt');
       $country = file_get_contents('country/lastcountry.txt');
       $ips = file_get_contents('ips/lastip.txt');
+      $host = file_get_contents('ips/lasthost.txt');
+      $port = file_get_contents('ips/lastport.txt');
+      $lastauth = file_get_contents('ips/lastauth.txt');
 ?>
 <html>
   <head>
@@ -16,7 +19,7 @@
     <div class="header navbar">
       <h1 style="font-size:inherit;text-align:center;">Cloud Appstorage Control Panel</h1>
     </div>
-    <div class="visitors">
+    <div class="country">
     <h1>Visitors:</h1>
       <?php echo "You have ".$num." visitors";  ?>
     </div>
@@ -27,6 +30,18 @@
     <div class="country">
     <h1>Last IP:</h1>
       <?php echo "Last ip: ".$ips; ?>
+    </div>
+    <div class="country">
+    <h1>Last Host:</h1>
+      <?php echo "Last host: ".$host; ?>
+    </div>
+    <div class="country">
+    <h1>Last Port:</h1>
+      <?php echo "Last port: ".$port; ?>
+    </div>
+    <div class="country">
+    <h1>Last Auth:</h1>
+      <?php echo "Last Auth: ".$lastauth; ?>
     </div>
     <div class="directory">
     </div>
@@ -42,7 +57,7 @@
       border:1px solid gray;
       background:white;
       border-radius:5px;
-      margin-top:10px;
+      margin-top:15px;
       text-align:center;
     }
     
