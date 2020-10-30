@@ -1,3 +1,8 @@
+<?php 
+      $num = file_get_contents('visitors/number.txt');
+      $country = file_get_contents('country/lastcountry.txt');
+      $ips = file_get_contents('ips/lastip.txt');
+?>
 <html>
   <head>
     <title>ControlPanel</title>
@@ -12,11 +17,35 @@
       <h1 style="font-size:inherit;text-align:center;">Cloud Appstorage Control Panel</h1>
     </div>
     <div class="visitors">
-       
+    <h1>Visitors:</h1>
+      <?php echo "You have ".$num." visitors";  ?>
+    </div>
+    <div class="country">
+    <h1>Country</h1>
+      <?php echo "Last country: ".$country; ?>
+    </div>
+    <div class="country">
+    <h1>Last IP:</h1>
+      <?php echo "Last ip: ".$ips; ?>
     </div>
     <div class="directory">
     </div>
     <style>
+    .visitors{
+      border:1px solid gray;
+      background:white;
+      border-radius:5px;
+      margin-top:10px;
+      text-align:center;
+    }
+    .country{
+      border:1px solid gray;
+      background:white;
+      border-radius:5px;
+      margin-top:10px;
+      text-align:center;
+    }
+    
        body{
       margin:0px;
     }
